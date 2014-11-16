@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.post_time }}</p>
+    <p>{{ post.body }}</p>
+
+    <p><form action="/delete/{{ post.id }}">
+        <input type="submit" value="Delete">
+    </form></p>
+    <p><form action="/edit/{{ post.id }}">
+        <input type="submit" value="Edit">
+    </form></p>
+    <p><form action="/">
+        <input type="submit" value="Ho‰me">
+    </form></p>
+{% endblock %}

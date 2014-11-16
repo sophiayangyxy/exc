@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <p><li><a href = "/post/{{ post.id }}/">{{ post.title }}</a> </li></p>
+        {{ post.body }}
+    {% endfor %}
+    <p>
+        <form action="/new/">
+            <input type="submit" value="New Post">
+        </form>
+    </p>
+{% endblock %}
